@@ -1,3 +1,5 @@
 [submodule "SFML"]
-	path = SFML
-	url = https://github.com/SFML/SFML.git
+	
+path = external/SFML
+	
+url = https://github.com/SFML/SFML.git

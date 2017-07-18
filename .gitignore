@@ -35,4 +35,5 @@ external/*
 .un*~
 *~
 CMakeFiles/
+build/
 
