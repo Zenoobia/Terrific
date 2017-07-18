@@ -1,0 +1,111 @@
+# Install script for directory: W:/terrific/external/entityx/src/entityx
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "W:/terrific/external/entityx")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
+
+# Set the component getting installed.
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "W:/terrific/external/entityx/lib/pkgconfig/entityx.pc")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "W:/terrific/external/entityx/lib/pkgconfig" TYPE FILE FILES "W:/terrific/external/entityx/src/entityx-build/entityx.pc")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "W:/terrific/external/entityx/src/entityx/entityx" FILES_MATCHING REGEX "/[^/]*\\.h$")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+     "W:/terrific/external/entityx/lib/entityx-d.lib")
+    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+file(INSTALL DESTINATION "W:/terrific/external/entityx/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "W:/terrific/external/entityx/src/entityx-build/Debug/entityx-d.lib")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+     "W:/terrific/external/entityx/lib/entityx.lib")
+    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+file(INSTALL DESTINATION "W:/terrific/external/entityx/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "W:/terrific/external/entityx/src/entityx-build/Release/entityx.lib")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+     "W:/terrific/external/entityx/lib/entityx.lib")
+    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+file(INSTALL DESTINATION "W:/terrific/external/entityx/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "W:/terrific/external/entityx/src/entityx-build/MinSizeRel/entityx.lib")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+     "W:/terrific/external/entityx/lib/entityx.lib")
+    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+    endif()
+file(INSTALL DESTINATION "W:/terrific/external/entityx/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "W:/terrific/external/entityx/src/entityx-build/RelWithDebInfo/entityx.lib")
+  endif()
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "W:/terrific/external/entityx/src/entityx-build/Debug/entityx-d.dll")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "W:/terrific/external/entityx/src/entityx-build/Release/entityx.dll")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "W:/terrific/external/entityx/src/entityx-build/MinSizeRel/entityx.dll")
+  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "W:/terrific/external/entityx/src/entityx-build/RelWithDebInfo/entityx.dll")
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT)
+  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+else()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+endif()
+
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+file(WRITE "W:/terrific/external/entityx/src/entityx-build/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

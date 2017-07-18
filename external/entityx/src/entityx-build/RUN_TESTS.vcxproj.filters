@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="W:\terrific\external\entityx\src\entityx-build\CMakeFiles\1e1c8d0164388e8838ce92de12e20a72\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CC8E6A89-026E-3287-A65B-E351D658374F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+repository='https://github.com/alecthomas/entityx.git'
+module=''
+tag=''
