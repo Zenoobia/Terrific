@@ -12,7 +12,12 @@ set(library_DIR "${Terrific_SOURCE_DIR}/libs")
 set(external_DIR "${Terrific_SOURCE_DIR}/external")
 
 
-add_subdirectory("${external_DIR}/SFML" EXCLUDE_FROM_ALL)
+add_subdirectory("${external_DIR}/SFML" )
+
+execute_process(COMMAND git submodule update --init external/SFML ${Terrific_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+set(SFML_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/SFML/include" CACHE PATH "SFML include directory")
+message(${SFML_INCLUDE_DIR})
+#find_package(SFML)
 
 if (${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU" OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -ggdb -std=c++11")
@@ -24,5 +29,5 @@ elseif (${CMAKE_CXX_COMPILER_ID} STREQUAL "MSVC")
     endif()
 endif()
 
-include_directories(include ${include_DIR}/entityx $(SDL2_INCLUDE_DIR))
+include_directories(include ${include_DIR}/entityx $(SFML_INCLUDE_DIR))
 #target_link_libraries(Terrific ${SDL2_LIBRARY))

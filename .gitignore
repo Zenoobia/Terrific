@@ -31,8 +31,8 @@
 *.out
 *.app
 build/
+external/*
 .un*~
 *~
 CMakeFiles/
-build/
 
