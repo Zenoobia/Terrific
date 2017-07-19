@@ -10,3 +10,6 @@
 [submodule "external/glfw"]
 	path = external/glfw
 	url = https://github.com/glfw/glfw.git
+[submodule "W:/terrific/external/SFML"]
+	path = W:/terrific/external/SFML
+	url = https://github.com/SFML/SFML.git
