@@ -2,6 +2,7 @@
 
 mkdir build
 pushd build
-cl -Zi ..\src\win32_terrific.cpp
+cmake ..
+devenv ALL_BUILD.vcxproj /build debug
 popd
 
