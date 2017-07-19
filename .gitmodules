@@ -13,3 +13,9 @@
 [submodule "W:/terrific/external/SFML"]
 	path = W:/terrific/external/SFML
 	url = https://github.com/SFML/SFML.git
+[submodule "external/sol2"]
+	path = external/sol2
+	url = https://github.com/ThePhD/sol2
+[submodule "external/lua"]
+	path = external/lua
+	url = https://github.com/lua/lua
