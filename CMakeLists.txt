@@ -13,11 +13,14 @@ set(include_DIR "${Terrific_SOURCE_DIR}/include")
 set(library_DIR "${Terrific_SOURCE_DIR}/libs")
 set(external_DIR "${Terrific_SOURCE_DIR}/external")
 
+execute_process(COMMAND git submodule add "https://github.com/SFML/SFML.git" "${external_DIR}/SFML")
+execute_process(COMMAND git submodule add "https://github.com/glfw/glfw.git" "${external_DIR}/glfw")
+
 
 execute_process(COMMAND git submodule update --init -- "${external_DIR}/SFML" ${Terrific_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 add_subdirectory("${external_DIR}/SFML")
-#set(SFML_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/SFML/include" CACHE PATH "SFML include directory")
-#message(${SFML_LIBRARIES})
+set(SFML_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/SFML/include")
+message(${CMAKE_CURRENT_SOURCE_DIR})
 
 #find_package(SFML COMPONENTS graphics window system)
 
@@ -26,7 +29,7 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory("${external_DIR}/glfw")
 
-include_directories(include ${glfw_INCLUDE_DIRS} ${include_DIR}/entityx ${include_DIR} $(SFML_INCLUDE_DIR) ${Terrific_SOURCE_DIR}/src)
+include_directories(include ${glfw_INCLUDE_DIRS} ${include_DIR}/entityx ${include_DIR} ${SFML_INCLUDE_DIR} ${Terrific_SOURCE_DIR}/src)
 add_subdirectory("${Terrific_SOURCE_DIR}/src")
 
 
