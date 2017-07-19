@@ -17,3 +17,6 @@
 	path = external/sol2
 	url = https://github.com/ThePhD/sol2
 
+[submodule "external/lua"]
+	path = external/lua
+	url = https://github.com/luaDist/lua

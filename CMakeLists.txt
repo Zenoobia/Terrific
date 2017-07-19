@@ -29,7 +29,9 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory("${external_DIR}/glfw")
 
-include_directories(include ${glfw_INCLUDE_DIRS} ${include_DIR}/entityx ${include_DIR} ${SFML_INCLUDE_DIR} ${Terrific_SOURCE_DIR}/src)
+add_subdirectory("${external_DIR}/lua")
+
+include_directories(include ${LUA_INCLUDE} "${external_DIR}/lua/src" "${external_DIR}/sol2" ${glfw_INCLUDE_DIRS} ${include_DIR}/entityx ${include_DIR} ${SFML_INCLUDE_DIR} ${Terrific_SOURCE_DIR}/src)
 add_subdirectory("${Terrific_SOURCE_DIR}/src")
 
 
