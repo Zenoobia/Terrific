@@ -27,7 +27,7 @@ int main()
 
     // let's use char array as buffer, see next part
     // for instructions on using std::string with ImGui
-    char windowTitle[255] = "ImGui + SFML = <3";
+    std::string windowTitle = "ImGui + SFML = <3";
 
     window.setTitle(windowTitle);
     window.resetGLStates(); // call it if you only draw ImGui. Otherwise not needed.
@@ -56,14 +56,16 @@ int main()
         }
 
         // Window title text edit
-        ImGui::InputText("Window title", windowTitle, 255);
+        if(ImGui::InputText("Window title", windowTitle.c_str(), 255))
+            window.setTitle(windowTitle);
 
-        if (ImGui::Button("Update window title")) {
-            // this code gets if user clicks on the button
-            // yes, you could have written if(ImGui::InputText(...))
-            // but I do this to show how buttons work :)
+        if(ImGui::Button("Clear")) {
+            windowTitle = "";
             window.setTitle(windowTitle);
         }
+
+
+
         ImGui::End(); // end window
 
         window.clear(bgColor); // fill background with color

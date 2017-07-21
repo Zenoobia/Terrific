@@ -1,0 +1,27 @@
+set exrc
+set secure
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
+
+augroup project
+	autocmd!
+	autocmd BufRead,BufNewFile *.h,*.cpp,*.c,*.hpp set filetype=cpp.doxygen
+augroup END
+
+let &path.="src/include,include,"
+
+
+set makeprg=call ../build.bat
+
+nnoremap <F4> :make!<cr>
+#nnoremap <F5> :!<cr>
+
+
+
+
+
