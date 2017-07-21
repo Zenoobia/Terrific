@@ -2,7 +2,7 @@
 setlocal
 cd /D %0\..
 
-@call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86 >NUL
+@call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64 >NUL
 
 mkdir build
 pushd build
